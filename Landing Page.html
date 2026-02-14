@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Landing Page</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  scroll-behavior:smooth;
+  line-height:1.6;
+}
+
+/* Navbar */
+header{
+  background:#111;
+  color:white;
+  padding:15px 50px;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.nav-links{
+  list-style:none;
+  display:flex;
+}
+
+.nav-links li{
+  margin-left:20px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#00adb5;
+}
+
+/* Hero Section */
+.hero{
+  height:100vh;
+  background:linear-gradient(to right,#00adb5,#393e46);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:48px;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:20px;
+}
+
+.hero button{
+  padding:12px 25px;
+  border:none;
+  background:#ffd369;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  background:white;
+}
+
+/* Features Section */
+.features{
+  padding:80px 50px;
+  text-align:center;
+}
+
+.feature-container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.feature-card{
+  background:#f4f4f4;
+  padding:30px;
+  width:280px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.feature-card:hover{
+  transform:translateY(-10px);
+}
+
+/* CTA Section */
+.cta{
+  background:#00adb5;
+  color:white;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.cta button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  background:#111;
+  color:white;
+  cursor:pointer;
+}
+
+/* Footer */
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{
+    font-size:32px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">BrandName</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <h1>Build Your Dream Website</h1>
+    <p>Modern, Responsive and Fast Landing Page Design</p>
+    <button onclick="scrollToSection('features')">Get Started</button>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <h2>Our Features</h2>
+  <div class="feature-container">
+    <div class="feature-card">
+      <h3>Responsive Design</h3>
+      <p>Works perfectly on all devices.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Fast Performance</h3>
+      <p>Optimized for speed and efficiency.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Modern UI</h3>
+      <p>Clean and professional layout.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready To Get Started?</h2>
+  <p>Join us today and grow your business.</p>
+  <button onclick="showAlert()">Join Now</button>
+</section>
+
+<footer id="contact">
+  <p>© 2026 BrandName | All Rights Reserved</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+function showAlert(){
+  alert("Thank you for joining us!");
+}
+</script>
+
+</body>
+</html>
